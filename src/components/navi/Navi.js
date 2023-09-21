@@ -12,6 +12,7 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "reactstrap";
+import CartSummary from "../cart/CartSummary";
 
 export default class Navi extends Component {
   constructor(props) {
@@ -42,17 +43,7 @@ export default class Navi extends Component {
               <NavItem>
                 <NavLink href="https://github.com/bobosii/eastwind-redux">Github</NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options 
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>Option 1</DropdownItem>
-                  <DropdownItem>Option 2</DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>Reset</DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
+              <CartSummary/>
             </Nav>
           </Collapse>
         </Navbar>

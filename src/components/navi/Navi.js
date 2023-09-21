@@ -40,7 +40,7 @@ export default class Navi extends Component {
                 <NavLink href="/components/">Components</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap">Github</NavLink>
+                <NavLink href="https://github.com/bobosii/eastwind-redux">Github</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>

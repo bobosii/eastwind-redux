@@ -1,3 +1,4 @@
 export default {
-  currenCategory: {categoryName:"Beverages"},
+  currenCategory: {},
+  categories:[],
 };

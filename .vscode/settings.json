@@ -1,0 +1,16 @@
+{
+    "workbench.list.horizontalScrolling": false,
+    "workbench.list.smoothScrolling": false,
+    "workbench.localHistory.enabled": true,
+    "workbench.editor.decorations.colors": true,
+    "workbench.statusBar.visible": false,
+    "workbench.editor.closeEmptyGroups": true,
+    "workbench.editor.decorations.badges": false,
+    "workbench.editor.highlightModifiedTabs": false,
+    "workbench.editor.focusRecentEditorAfterClose": true,
+    "workbench.editor.limit.excludeDirty": false,
+    "workbench.editor.limit.enabled": false,
+    "workbench.editor.sharedViewState": false,
+    "zenMode.hideTabs": true,
+    "workbench.view.alwaysShowHeaderActions": false
+}

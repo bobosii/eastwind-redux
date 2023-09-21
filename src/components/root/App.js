@@ -1,10 +1,14 @@
 import React from "react";
+import { Container } from "reactstrap";
+import Navi from "../navi/Navi";
+import Dashboard from "../navi/Dashboard";
 
 function App() {
   return (
-    <div >
-      <h1>Control</h1>
-    </div>
+    <Container>
+      <Navi />
+      <Dashboard />
+    </Container>
   );
 }
 

@@ -1,7 +1,8 @@
-## EASTWIND-REDUX
+# EASTWIND-REDUX
 
-# Using
+### Using
 
+HTLM
 Javascript
 React
 Redux

@@ -23,7 +23,11 @@ export default function cartReducer(state = initialState.cart, action) {
       }
 
     //eklenmeye çalışılan ürün daha önce sepette var mı bul
-
+    case actionTypes.REMOVE_FROM_CART:
+      const newState2 = state.filter(
+        (cartItem) => cartItem.product.id !== action.payload.id // eğer id farklıysa onları filterele demek
+      );
+      return newState2;
     default:
       return state;
   }

@@ -1,4 +1,5 @@
 export default {
   currenCategory: {},
-  categories:[],
+  categories: [],
+  products: [],
 };

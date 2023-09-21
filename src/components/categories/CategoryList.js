@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as categoryActions from "../../redux/actions/categoryActions";
 import { Badge, ListGroup, ListGroupItem } from "reactstrap";
+import * as ProductActions from "../../redux/actions/productActions";
 
 // ReduxThunk aslında bir middlewaredir iki operasyon arası düzenleyici gibi düşünebilirsin
 
@@ -12,15 +13,14 @@ class CategoryList extends Component {
   }
   selectCategory = (categories) => {
     this.props.actions.changeCategory(categories);
+    this.props.actions.getProducts(categories.id);
   };
 
   render() {
     return (
       <div>
         <h3>
-          <Badge>
-            Categories
-          </Badge>
+          <Badge>Categories</Badge>
         </h3>
         <ListGroup>
           {this.props.categories.map((categories) => (
@@ -58,6 +58,7 @@ function mapDispatchToProps(dispatch) {
         categoryActions.changeCategory,
         dispatch
       ),
+      getProducts: bindActionCreators(ProductActions.getProducts, dispatch),
     },
   };
 }

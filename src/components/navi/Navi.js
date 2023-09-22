@@ -7,12 +7,9 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
 } from "reactstrap";
 import CartSummary from "../cart/CartSummary";
+import { Link } from "react-router-dom";
 
 export default class Navi extends Component {
   constructor(props) {
@@ -33,7 +30,9 @@ export default class Navi extends Component {
     return (
       <div>
         <Navbar color="light" light-expand="md">
-          <NavbarBrand href="/">Main Page</NavbarBrand>
+          <NavbarBrand href="/">
+            <Link to={"/"}>Main Page</Link>
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -41,9 +40,11 @@ export default class Navi extends Component {
                 <NavLink href="/components/">Components</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/bobosii/eastwind-redux">Github</NavLink>
+                <NavLink href="https://github.com/bobosii/eastwind-redux">
+                  Github
+                </NavLink>
               </NavItem>
-              <CartSummary/>
+              <CartSummary />
             </Nav>
           </Collapse>
         </Navbar>
@@ -51,4 +52,3 @@ export default class Navi extends Component {
     );
   }
 }
-

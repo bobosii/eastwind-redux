@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { getCategories } from "../../redux/actions/categoryActions";
 import { saveProduct } from "../../redux/actions/productActions";
 import ProductDetail from "./ProductDetail";
-import { useLocation, useMatch, useParams } from "react-router-dom";
+
 
 function AddOrUpdateProduct({
   products,

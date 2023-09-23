@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { getCategories } from "../../redux/actions/categoryActions";
 import { saveProduct } from "../../redux/actions/productActions";
 import ProductDetail from "./ProductDetail";
+import { useLocation, useMatch, useParams } from "react-router-dom";
 
 function AddOrUpdateProduct({
   products,
@@ -45,13 +46,13 @@ function AddOrUpdateProduct({
   );
 }
 
-export function getProductById(categories, categoryId) {
-  let product = categories.find((categories) => categoryId === categories.id) || null;
+export function getProductById(products, productId) {
+  let product = products.find((product) => product.id == productId) || null;
   return product;
 }
 
-function mapStateToProps(state, ownProps) {
-  const productId = ownProps.match && ownProps.match.params.productId;
+function mapStateToProps(state) {
+  const productId = window.location.pathname.split("saveproduct/")[1];
   // baştaki initial boş olduğu için burada patlıyordu ufak bir ve ekleyip düzelttik.
   const product =
     productId && state.productListReducer.length > 0

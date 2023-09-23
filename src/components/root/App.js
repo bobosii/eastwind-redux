@@ -5,6 +5,7 @@ import Dashboard from "../navi/Dashboard";
 import { Route, Routes } from "react-router-dom";
 import CartDetail from "../cart/CartDetail";
 import AddOrUpdate from "../products/AddOrUpdate";
+import NotFound from "../common/NotFound";
 
 function App() {
   return (
@@ -18,6 +19,11 @@ function App() {
           path="/saveproduct/:productId"
           element={<AddOrUpdate></AddOrUpdate>}
         />
+        <Route
+          path="/saveproduct"
+          element={<AddOrUpdate></AddOrUpdate>}
+        />
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
     </Container>
   );
